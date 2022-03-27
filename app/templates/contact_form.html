@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <link rel="stylesheet" media="(min-width: 992px)" type="text/css" href="{{ url_for('static', filename='styles/forms-desktop.css') }}">
+    <link rel="stylesheet" media="(max-width: 992px)" type="text/css" href="{{ url_for('static', filename='styles/forms-mobile.css') }}">
+    <div id="wrapper">
+    <div id="form_container">
+        <form id="contact_form" action="" method="post" novalidate>
+    {{ form.hidden_tag() }}
+
+    <p>
+    {{ form.email.label }}<br>
+        {{ form.email(class_='short_box') }}
+        {% for error in form.email.errors %}
+            <span style="color: #DA2C38;">[{{ error }}]</span>
+            {% endfor %}
+    </p>
+
+    <p>
+    {{ form.name.label }}<br>
+        {{ form.name(class_='short_box') }}
+        {% for error in form.name.errors %}
+            <span style="color: #DA2C38;">[{{ error }}]</span>
+            {% endfor %}
+    </p>
+
+    <p>
+        {{ form.message.label }}<br>
+            {{ form.message(class_='large_box') }}
+        {% for error in form.message.errors %}
+            <span style="color: #DA2C38;">[{{ error }}]</span>
+            {% endfor %}
+    </p>
+
+    <p>
+        {{ form.submit(class_='submit_button') }}
+    </p>
+    </form>
+    </div>
+
+    <div id="Footer">
+        <p>© Iris Meredith for Noether Analytics limited.</p>
+    </div>
+    </div>
+
+{% endblock %}

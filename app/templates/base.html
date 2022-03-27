@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
+    <title>IoM</title>
+    {% endif %}
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Signika">
+    <link rel="icon" href="images/Web_Icon.png">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/styles.css') }}">
+    <link rel="stylesheet" media="screen and (min-width: 992px)" type="text/css" href="{{ url_for('static', filename='styles/index-desktop.css') }}">
+    <link rel="stylesheet" media="screen and (max-width: 992px)" type="text/css" href="{{ url_for('static', filename='styles/index-mobile.css') }}">
+</head>
+<body>
+       <nav class="navbar">
+            <ul class="navbar-list">
+                <li class="navbar-element"><a class="navbar-link" href="/index.html#open-screen">Home</a></li>
+                <li class="navbar-element"><a class="navbar-link" href="/services.html">Services</a></li>
+                <li class="navbar-element"><a class="navbar-link" href="/courses.html">Courses</a></li>
+                <li class="navbar-element" ><a class="navbar-link" href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+
+       <img id="logo" src="images/NA.png">
+
+{% block content %}
+{% endblock %}
+</body>
+</html>
