@@ -1,3 +1,9 @@
+# This is a script for testing a few Heroku mail add-ons. I can't recall what I wound up settling on in the end, but this was simply testing basic functions.
+
+# Author: Iris Meredith
+
+# Last modified" 27/12/2023
+
 from os import environ
 from urllib.parse import urlparse
 import smtplib
