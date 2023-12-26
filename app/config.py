@@ -1,5 +1,11 @@
-import os
+# This is a flask config file containing all the important configuration info for the website.
+# There's nothing much to see here really.
 
+# Author: Iris Meredith
+
+# Last modified: 27/12/2023
+
+import os
 
 class Config(object):
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'test_key'
