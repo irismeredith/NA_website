@@ -1,3 +1,10 @@
+# This file contains the two major routes for the wesite app: the index, which simply serves a static html file with whitenoise, and the contact form,
+# which sends emails to both the sender and the site admin.
+
+# Author: Iris Meredith
+
+# Last modified: 27/12/2023
+
 from flask import render_template, redirect, send_from_directory
 from flask_mail import Message
 from app import mail
